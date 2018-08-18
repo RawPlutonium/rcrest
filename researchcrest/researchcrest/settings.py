@@ -25,7 +25,7 @@ SECRET_KEY = '!a+fz1kdby$83w8!!r@l+_n=sidn9+3u*p)fiy!e^v!p$wd@)@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'localhost']
+ALLOWED_HOSTS = ['*']
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Application definition
