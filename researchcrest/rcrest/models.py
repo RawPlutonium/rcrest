@@ -4,13 +4,6 @@ from django.db import models
 from math import ceil
 
 
-
-class CustomUser(AbstractUser):
-    def __str__(self):
-
-        return self.name +" "+ self.password +" "+ self.email
-
-
 # GRADE_OPTIONS
 GRADE_OPTIONS = (
 ('HIGH_SCHOOL', 'High School'),
@@ -19,20 +12,19 @@ GRADE_OPTIONS = (
 ('DOCTORATE', 'Doctorate')
 )
 
-# #TIME Options
-# TIME_OPTIONS=(
-# (6, '6 Hours'),
-# (12, '12 Hours'),
-# (1, '1 Day'),
-# (2, '2 Days'),
-# (3, '3 Days'),
-# (4, '4 Days'),
-# (5, '5 Days'),
-# (7, '7 Days'),
-# (14, '14 Days'),
-# (30, '30 Days'),
-#
-# )
+#TIME Options
+TIME_OPTIONS=(
+(6, '6 Hours'),
+(12, '12 Hours'),
+(1, '1 Day'),
+(2, '2 Days'),
+(3, '3 Days'),
+(4, '4 Days'),
+(5, '5 Days'),
+(7, '7 Days'),
+(14, '14 Days'),
+(30, '30 Days'),
+)
 
 class Order(models.Model):
     grade = models.CharField(choices=GRADE_OPTIONS)
